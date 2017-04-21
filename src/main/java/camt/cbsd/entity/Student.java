@@ -1,9 +1,13 @@
 package camt.cbsd.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.*;
 import org.hibernate.annotations.CascadeType;
+
 
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -19,7 +23,8 @@ import java.util.Optional;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Builder
+@Builder(builderMethodName = "bb")
+
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,4 +48,22 @@ public class Student {
     }
 
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Course> getEnrolledCourse() {
+        return enrolledCourse;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public static void builder() {
+    }
 }

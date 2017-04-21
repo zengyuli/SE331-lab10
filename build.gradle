@@ -38,6 +38,9 @@ dependencies {
 	compile("com.h2database:h2")
 	compile group: 'org.projectlombok', name: 'lombok'
 	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile("org.springframework.boot:spring-boot-starter-security")
+	compile("io.jsonwebtoken:0.7.0")
+	compile("org.springframework.mobile:spring-mobile-device")
 
 
 }

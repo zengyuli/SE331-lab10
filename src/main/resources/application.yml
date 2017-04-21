@@ -29,3 +29,13 @@ spring:
 server:
   baseUrl: https://s3-ap-southeast-1.amazonaws.com/se331/
   imageUrl: pics/
+
+---
+jwt:
+  header: Authorization
+  secret: mySecret
+  Expiration: 604800
+  route:
+    authentication:
+      path:auth
+      refresh: refresh
